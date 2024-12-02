@@ -8,6 +8,6 @@ namespace DirectDBAccess
 {
     public interface IDatabase
     {
-        public void Insert();
+        public void Insert(string firstName, string lastName);
     }
 }
