@@ -29,7 +29,6 @@ namespace DirectDBAccess
                 command.Parameters.AddWithValue("@lastName", lastName);
                 command.ExecuteNonQuery();
             }
-
             Console.WriteLine("Success");
         }
     }
@@ -44,7 +43,6 @@ namespace DirectDBAccess
             _database = client.GetDatabase("Person");
             _collection = _database.GetCollection<BsonDocument>("Jobs");
         }
-
         public void Insert(string firstName, string lastName)
         {
             var document = new BsonDocument

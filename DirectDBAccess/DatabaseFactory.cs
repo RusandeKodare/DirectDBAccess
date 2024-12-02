@@ -23,7 +23,18 @@ namespace DirectDBAccess
                 _ => throw new ArgumentException("Invalid choice. Please select a valid database type.")
             };
         }
+    }
 
-
+    public class DatabaseService
+    {
+        private readonly IDatabase _database;
+        public DatabaseService(IDatabase database)
+        {
+            _database = database;
+        }
+        public void Insert(string firstName, string lastName)
+        {
+            _database.Insert(firstName, lastName);
+        }
     }
 }
