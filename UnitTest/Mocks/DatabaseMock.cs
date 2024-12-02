@@ -20,10 +20,6 @@ namespace UnitTest.Mocks
             {
                 _successful = true;
             }
-            else
-            {
-                _successful = true;
-            }
         }
     }
 }
