@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace DirectDBAccess
 {
@@ -26,9 +21,24 @@ namespace DirectDBAccess
     }
     public class MockIO : IIO
     {
+        private int Index;
+
+        public MockIO(int index)
+        {
+            Index = index;
+        }
         public string ReadLine()
         {
-            return "John";
+            if (Index == 1)
+            {
+                Index++;
+                return "John";
+            }
+            else
+            {
+                return "Doe";
+            }
+            
         }
         public void WriteLine(string line)
         {

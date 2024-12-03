@@ -20,5 +20,4 @@
             _database.Insert(firstName, lastName);
         }
     }
-
 }
